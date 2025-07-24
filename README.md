@@ -46,7 +46,7 @@ Sistema para gerenciamento de recargas de veículos, com importação de dados, 
 Após configurar o `.env` e o banco:
 
 ```bash
-npm start
+node server.js
 ```
 
 Por padrão, a aplicação será iniciada em `http://localhost:3000`.
