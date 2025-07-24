@@ -83,3 +83,10 @@ projeto recarga/
 
 - `base_inicial.csv`  
   Base de dados de recarga que pode ser usada para importação manual no banco.
+
+
+DIAGRAMA DO BANCO :
+
+<img width="678" height="547" alt="diagrama" src="https://github.com/user-attachments/assets/ee856fe3-9f8b-40df-95d5-968db4e7f4ce" />
+
+
