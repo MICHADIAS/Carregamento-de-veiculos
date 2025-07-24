@@ -18,9 +18,12 @@ Sistema para gerenciamento de recargas de veículos, com importação de dados, 
    cd projeto-recarga
    ```
 
-3. **Instalar dependências Node.js**  
+3. **Instalar dependências Node.js sql12 e dotenv**  
    ```bash
    npm install
+   npm install dotenv mysql2
+
+
    ```
 
 4. **Configurar variáveis de ambiente**  
