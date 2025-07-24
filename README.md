@@ -60,12 +60,26 @@ projeto recarga/
 ├── .env                       # Variáveis de ambiente
 ├── base_inicial.csv          # Base de dados para importação
 ├── package.json              # Dependências e scripts
+├── package-lock.json         # Lockfile do NPM
 ├── server.js                 # Ponto de entrada da aplicação
 ├── db.js                     # Conexão com banco MySQL
 ├── controllers/              # Lógica das rotas
 │   ├── recargaController.js
 │   └── veiculoController.js
-└── node_modules/             # Dependências do projeto
+├── routes/                   # Arquivos de rota
+│   ├── recargaRoutes.js
+│   └── veiculoRoutes.js
+├── public/                   # Arquivos públicos (HTML, CSS, JS)
+│   ├── css/
+│   │   ├── estiloslogin.css
+│   │   └── estilosrecarga.css
+│   ├── js/
+│   │   └── recarga.js
+│   └── recarga.html
+├── views/                    # Páginas renderizadas pelo servidor (caso use ejs/pug)
+│   └── login.html
+└── node_modules/             # Dependências do projeto (auto-gerado pelo npm)
+
 ```
 
 ---
