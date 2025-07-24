@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilosrecarga.css">
+    <title>Recarga de Veículos</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Início da Recarga</h2>
+      <form id="form1" class="section">
+        <label for="veiculo_id">Veículo:</label>
+        <select id="veiculo_id" name="veiculo_id" required>
+          <option value="" selected disabled>Selecione um veículo</option>
+        </select>
+        
+        <label for="km_inicial">KM atual:</label>
+        <input type="number" id="km_inicial" name="km_inicial" readonly />
+
+        <label for="km_final">KM final (odômetro):</label>
+        <input type="number" id="km_final" name="km_final" required />
+
+        <label for="percentual_inicio">% Bateria Inicial:</label>
+        <input type="number" id="percentual_inicio" name="percentual_inicio" min="0" max="100" required />
+
+        <button type="submit">Iniciar Recarga</button>
+      </form>
+
+      <h2 class="section">Finalizar Recarga</h2>
+      <form id="form2" class="section">
+        <label for="recarga_id">Recargas Iniciadas:</label>
+        <select id="recarga_id" name="recarga_id">
+          <option value="" selected disabled>Selecione uma recarga</option>
+        </select>
+
+        <label for="percentual_final">% Bateria Final:</label>
+        <input type="number" id="percentual_final" name="percentual_final" min="0" max="100" />
+
+        <label for="kwh">KWh Consumido:</label>
+        <input type="number" id="kwh" name="kwh" step="0.1" />
+
+        <button type="submit">Finalizar Recarga</button>
+      </form>
+    </div>
+
+    <script src="js/recarga.js"></script>
+  </body>
+</html>

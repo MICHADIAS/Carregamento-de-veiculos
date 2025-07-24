@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/estiloslogin.css">
+  <title>Login Operacional - Recarga</title>
+</head>
+<body>
+  <div class="container">
+    <form id="form">
+      <h2>Login Operacional</h2>
+
+      <div class="date" id="current-date" disabled></div>
+
+      <label for="operador_id">Identificação do Operador:</label>
+      <input type="text" id="operador_id" name="operador_id" placeholder="Digite seu nome ou ID" required />
+
+      <label for="eletroposto_id">Selecione o Eletroposto:</label>
+      <select id="eletroposto_id" name="eletroposto_id" required>
+        <option value="">Selecione...</option>
+        <option value="Eletroposto 01">Eletroposto 1</option>
+        <option value="Eletroposto 02">Eletroposto 2</option>
+        <option value="Eletroposto 03">Eletroposto 3</option>
+        <option value="Eletroposto 04">Eletroposto 4</option>
+        <option value="Eletroposto 05">Eletroposto 5</option>
+        <option value="Eletroposto 06">Eletroposto 6</option>
+      </select>
+
+      <button type="submit">Continuar</button>
+    </form>
+  </div>
+
+  <script>
+    // Mostrar data atual
+    const dataEl = document.getElementById("current-date");
+    const hoje = new Date();
+    const dataFormatada = hoje.toLocaleDateString("pt-BR");
+    dataEl.textContent = `Data: ${dataFormatada}`;
+
+    document.getElementById('form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const dados = new FormData(this);
+
+        for (const [key, value] of dados.entries()) {
+          localStorage.setItem(key, value);
+        }
+        alert("Login realizado com sucesso!");
+        window.location.href = "recarga.html";
+    });
+  </script>
+</body>
+</html>
